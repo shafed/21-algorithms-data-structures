@@ -4,7 +4,7 @@ out/
 *.class
 *.jar
 
-### Eclipse JDT — сгенерирует jdtls при работе в Neovim ###
+### Eclipse JDT (jdtls) ###
 .classpath
 .project
 .settings/

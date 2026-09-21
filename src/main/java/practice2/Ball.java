@@ -1,20 +1,15 @@
 package practice2;
 
-/**
- * Практическая 2, задание 2: сущность «Мяч» по UML-диаграмме (рис. 2.5) —
- * точка на плоскости, которую можно сдвигать.
- */
 public class Ball {
 
-    // Значения по умолчанию заданы на диаграмме: -x:double = 0.0, -y:double = 0.0.
     private double x = 0.0;
     private double y = 0.0;
 
     public Ball(double x, double y) {
-        setXY(x, y);
+        this.x = x;
+        this.y = y;
     }
 
-    /** По диаграмме у мяча есть и конструктор без аргументов: координаты нулевые. */
     public Ball() {
     }
 
@@ -39,9 +34,9 @@ public class Ball {
         this.y = y;
     }
 
-    /** Сдвигает мяч на смещение (xDisp, yDisp) относительно текущей позиции. */
     public void move(double xDisp, double yDisp) {
-        setXY(x + xDisp, y + yDisp);
+        this.x += xDisp;
+        this.y += yDisp;
     }
 
     @Override

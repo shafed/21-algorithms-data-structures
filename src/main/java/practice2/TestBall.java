@@ -1,6 +1,5 @@
 package practice2;
 
-/** Практическая 2, задание 2: проверка всех методов класса {@link Ball}. */
 public class TestBall {
 
     public static void main(String[] args) {

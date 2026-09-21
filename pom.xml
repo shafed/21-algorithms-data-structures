@@ -12,13 +12,8 @@
     <maven.compiler.release>17</maven.compiler.release>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <!--
-      Класс по умолчанию для `mvn exec:java`. Задан свойством, а не внутри
-      <configuration> плагина: значение из <configuration> имеет приоритет над
-      -Dexec.mainClass и перекрыть его из командной строки нельзя.
-      Так же работает: mvn exec:java -Dexec.mainClass=practice2.TestBall
-    -->
-    <exec.mainClass>practice1.Task3ArraySum</exec.mainClass>
+    <!-- Запуск другого класса: mvn exec:java -Dexec.mainClass=practice2.TestBall -->
+    <exec.mainClass>practice1.Task3</exec.mainClass>
   </properties>
 
   <build>

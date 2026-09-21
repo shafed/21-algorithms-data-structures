@@ -1,6 +1,5 @@
 package practice2;
 
-/** Практическая 2, задание 1: проверка всех методов класса {@link Author}. */
 public class TestAuthor {
 
     public static void main(String[] args) {
