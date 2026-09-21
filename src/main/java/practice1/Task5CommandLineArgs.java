@@ -1,9 +1,22 @@
-package practice_1;
+package practice1;
 
-public class practice_1_5 {
+/**
+ * Практическая 1, задание 5: вывод аргументов командной строки в цикле for.
+ *
+ * <p>Запуск: {@code mvn exec:java -Dexec.mainClass=practice1.Task5CommandLineArgs
+ * -Dexec.args="один два три"}
+ */
+public class Task5CommandLineArgs {
+
     public static void main(String[] args) {
-        for (String s : args) {
-            System.out.println(s);
+        if (args.length == 0) {
+            System.out.println("Аргументы командной строки не переданы.");
+            return;
+        }
+
+        System.out.println("Передано аргументов: " + args.length);
+        for (int i = 0; i < args.length; i++) {
+            System.out.println("args[" + i + "] = " + args[i]);
         }
     }
 }

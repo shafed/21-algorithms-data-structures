@@ -1,31 +1,73 @@
-package practice_1;
+package practice1;
+
+import java.util.Arrays;
 import java.util.Scanner;
 
-public class practice_1_4 {
+/**
+ * Практическая 1, задание 4: массив вводится с клавиатуры, сумма считается
+ * циклами while и do while, дополнительно ищутся максимум и минимум.
+ */
+public class Task4ArrayStats {
+
+    private static final int SIZE = 10;
+
     public static void main(String[] args) {
-        int[] b = new int[10];
+        int[] numbers = readNumbers(SIZE);
+
+        // Задание требует посчитать сумму двумя циклами, поэтому считаем дважды.
+        int sumWhile = 0;
         int i = 0;
-        float sum_list = 0;
-        int cnt = 0;
-        Scanner sc = new Scanner(System.in);
-        while(i < 10) {
-            System.out.println("Введите число: ");
-            b[i] = sc.nextInt();
-            sum_list = sum_list + b[i];
-            cnt = cnt + 1;
-            i = i + 1;
+        while (i < numbers.length) {
+            sumWhile += numbers[i];
+            i++;
         }
-        int min = b[0];
-        int max = b[0];
-        for (int k = 0; k < 10; k++) {
-            if (b[k] > max) max = b[k];
-            if (b[k] < min) min = b[k];
+
+        // do while выполняет тело хотя бы один раз, поэтому он корректен только
+        // для непустого массива — здесь это гарантирует константа SIZE.
+        int sumDoWhile = 0;
+        int j = 0;
+        do {
+            sumDoWhile += numbers[j];
+            j++;
+        } while (j < numbers.length);
+
+        int min = numbers[0];
+        int max = numbers[0];
+        for (int k = 1; k < numbers.length; k++) {
+            if (numbers[k] > max) {
+                max = numbers[k];
+            }
+            if (numbers[k] < min) {
+                min = numbers[k];
+            }
         }
-        System.out.println(sum_list);
-        System.out.println(sum_list/cnt);
-        System.out.println(max);
-        System.out.println(min);
 
+        System.out.println("Массив: " + Arrays.toString(numbers));
+        System.out.println("Сумма (while):    " + sumWhile);
+        System.out.println("Сумма (do while): " + sumDoWhile);
+        System.out.println("Максимум: " + max);
+        System.out.println("Минимум:  " + min);
+    }
 
+    /** Читает ровно {@code count} целых чисел, переспрашивая при неверном вводе. */
+    private static int[] readNumbers(int count) {
+        int[] numbers = new int[count];
+        try (Scanner scanner = new Scanner(System.in)) {
+            int i = 0;
+            while (i < numbers.length) {
+                System.out.print("Введите число " + (i + 1) + " из " + numbers.length + ": ");
+                if (!scanner.hasNext()) {
+                    throw new IllegalStateException(
+                            "Ввод закончился, прочитано чисел: " + i + " из " + numbers.length);
+                }
+                if (!scanner.hasNextInt()) {
+                    System.out.println("\"" + scanner.next() + "\" — не целое число, повторите ввод.");
+                    continue;
+                }
+                numbers[i] = scanner.nextInt();
+                i++;
+            }
+        }
+        return numbers;
     }
 }
