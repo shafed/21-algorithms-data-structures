@@ -1,20 +1,24 @@
-package practice_1;
+package practice2;
 
+/** Практическая 2, задание 2: проверка всех методов класса {@link Ball}. */
 public class TestBall {
+
     public static void main(String[] args) {
         Ball ball = new Ball();
-        System.out.println(ball);
-        Ball ball2 = new Ball(10, 10.5);
-        System.out.println(ball2);
+        System.out.println("new Ball():           " + ball);
 
-        ball.setX(1);
-        ball.setY(5);
-        System.out.println(ball);
-        System.out.println(ball.getX());
-        ball2.move(2.5, 1);
-        System.out.println(ball2);
+        Ball other = new Ball(10.0, 10.5);
+        System.out.println("new Ball(10.0, 10.5): " + other);
 
+        ball.setX(1.0);
+        ball.setY(5.0);
+        System.out.println("после setX/setY:      " + ball);
+        System.out.println("getX() = " + ball.getX() + ", getY() = " + ball.getY());
 
+        ball.setXY(-3.0, 7.0);
+        System.out.println("после setXY:          " + ball);
 
+        other.move(2.5, 1.0);
+        System.out.println("после move(2.5, 1.0): " + other);
     }
 }

@@ -1,37 +1,42 @@
-package practice_1;
+package practice2;
 
+/**
+ * Практическая 2, задание 1: сущность «Автор» по UML-диаграмме (рис. 2.4).
+ *
+ * <p>Состав класса задан диаграммой: поля name, email, gender; один конструктор
+ * с тремя аргументами; геттеры на все три поля и сеттер только на email.
+ * Поэтому name и gender объявлены final — менять их после создания нечем.
+ */
 public class Author {
-  private String name;
-  private String email;
-  private char gender;
 
-  public Author(String name, String email, char gender) {
-    this.name = name;
-    this.email = email;
-    this.gender = gender;
-  }
+    private final String name;
+    private String email;
+    private final char gender;
 
-  public Author() {
-  }
+    public Author(String name, String email, char gender) {
+        this.name = name;
+        this.email = email;
+        this.gender = gender;
+    }
 
-  public String getName() {
-    return name;
-  }
+    public String getName() {
+        return name;
+    }
 
-  public String getEmail() {
-    return email;
-  }
+    public String getEmail() {
+        return email;
+    }
 
-  public void setEmail(String email) {
-    this.email = email;
-  }
+    public void setEmail(String email) {
+        this.email = email;
+    }
 
-  public char getGender() {
-    return gender;
-  }
+    public char getGender() {
+        return gender;
+    }
 
-  @Override
-  public String toString() {
-    return "Author{" + "name='" + name + '\'' + ", email='" + email + '\'' + ", gender='" + gender + '}';
-  }
+    @Override
+    public String toString() {
+        return "Author{name='" + name + "', email='" + email + "', gender='" + gender + "'}";
+    }
 }
