@@ -4,18 +4,20 @@ out/
 *.class
 *.jar
 
+### Eclipse JDT — сгенерирует jdtls при работе в Neovim ###
+.classpath
+.project
+.settings/
+.factorypath
+.apt_generated/
+bin/
+
 ### IntelliJ IDEA ###
 .idea/
 *.iml
 
-### Eclipse ###
-.classpath
-.project
-.settings
-bin/
-
 ### VS Code ###
 .vscode/
 
-### macOS ###
+### OS ###
 .DS_Store
