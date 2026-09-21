@@ -11,8 +11,15 @@ public class Task7 {
     }
 
     public static void main(String[] args) {
-        for (int n = 0; n <= 10; n++) {
-            System.out.println(n + "! = " + factorial(n));
+        int[] numbers = { 0, 1, 5, 10, 20, -1, 21 };
+
+        for (int i = 0; i < numbers.length; i++) {
+            int n = numbers[i];
+            if (n < 0 || n > 20) {
+                System.out.println(n + "! посчитать нельзя: нужно 0 <= n <= 20");
+            } else {
+                System.out.println(n + "! = " + factorial(n));
+            }
         }
     }
 }
