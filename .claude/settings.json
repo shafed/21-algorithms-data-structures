@@ -1,0 +1,15 @@
+{
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "sh -c 'h=\"$CLAUDE_PROJECT_DIR/../dotfiles/.claude/hooks/session-memory.sh\"; [ -x \"$h\" ] || exit 0; exec \"$h\" --remote-only'",
+            "statusMessage": "load cross-session memory"
+          }
+        ]
+      }
+    ]
+  }
+}
