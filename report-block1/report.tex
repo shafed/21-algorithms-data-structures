@@ -1,0 +1,73 @@
+\documentclass[14pt,a4paper]{extarticle}
+\usepackage[left=3cm,right=1.5cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{fontspec}
+\usepackage[russian]{babel}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage[hidelinks]{hyperref}
+\setmainfont{Liberation Serif}
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+
+\newcommand{\blocknum}{1}
+\newcommand{\student}{КВБО-11-25 Шапаренко Ф.}
+\newcommand{\teacher}{ст. преподаватель Киселев Д.С.}
+\newcommand{\repo}{https://github.com/shafed/21-algorithms-data-structures}
+
+\newcommand{\hint}[1]{{\small\textit{(#1)}}}
+\newcommand{\signline}[1]{\makebox[#1]{\hrulefill}}
+
+\begin{document}
+
+\begin{center}
+  \includegraphics[height=2.8cm]{logo.png}\\[6pt]
+  {\large МИНОБРНАУКИ РОССИИ}\\[6pt]
+  Федеральное государственное бюджетное образовательное учреждение\\
+  высшего профессионального образования\\[6pt]
+  \textbf{«МИРЭА --- Российский технологический университет»}\\[6pt]
+  \textbf{РТУ МИРЭА}\\[10pt]
+  \begin{tabular}{p{0.85\textwidth}}
+    \centering Институт искусственного интеллекта\tabularnewline\hline
+    \centering Кафедра промышленной информатики\tabularnewline\hline
+  \end{tabular}
+\end{center}
+
+\vspace{3cm}
+
+\begin{center}
+  {\large\textbf{ОТЧЕТ ПО ПРАКТИЧЕСКОЙ РАБОТЕ «БЛОК \blocknum»}}\\[10pt]
+  \textbf{по дисциплине}\\[4pt]
+  «Введение в алгоритмы и структуры данных систем реального времени»
+\end{center}
+
+\vspace{1.5cm}
+
+\noindent
+\begin{tabular}{@{}l p{7.8cm} p{0.3cm} p{3.2cm}@{}}
+  \textbf{Студент группы} & \centering\student & & \tabularnewline
+  \cline{2-2}\cline{4-4}
+  & \centering\hint{учебная группа, фамилия, имя, отчество студента} & & \centering\hint{подпись студента}\tabularnewline[18pt]
+  \textbf{Преподаватель} & \centering\teacher & & \tabularnewline
+  \cline{2-2}\cline{4-4}
+  & \centering\hint{должность, ученая степень, звание, фамилия, имя, отчество преподавателя} & & \centering\hint{подпись преподавателя}\tabularnewline
+\end{tabular}
+
+\vspace{1.5cm}
+
+\noindent
+\begin{tabular}{@{}p{5cm} l@{}}
+  Работа выполнена & «\underline{\hspace{1cm}}» \underline{\hspace{3cm}} 2026 г.\\[10pt]
+  «Зачтено» & «\underline{\hspace{1cm}}» \underline{\hspace{3cm}} 2026 г.\\
+\end{tabular}
+
+\vfill
+\begin{center}Москва 2026\end{center}
+
+\newpage
+\pagestyle{plain}
+
+\section*{Программный код (ссылка на GitHub)}
+
+\url{\repo}
+
+\end{document}
