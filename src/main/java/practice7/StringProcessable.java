@@ -1,6 +1,6 @@
 package practice7;
 
-public interface StringInterface {
+public interface StringProcessable {
   int countChars(String text);
 
   String oddChars(String text);

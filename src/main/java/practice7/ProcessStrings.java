@@ -1,6 +1,6 @@
 package practice7;
 
-public class ProcessStrings implements StringInterface {
+public class ProcessStrings implements StringProcessable {
 
   @Override
   public int countChars(String text) {
