@@ -12,8 +12,8 @@
     <maven.compiler.release>21</maven.compiler.release>
     <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
     <project.reporting.outputEncoding>UTF-8</project.reporting.outputEncoding>
-    <!-- Запуск другого класса: mvn exec:java -Dexec.mainClass=practice2.TestBall -->
-    <exec.mainClass>practice1.Task3</exec.mainClass>
+    <!-- Запуск другого класса: mvn exec:java -Dexec.mainClass=block1.practice2.TestBall -->
+    <exec.mainClass>block1.practice1.Task3</exec.mainClass>
   </properties>
 
   <build>
