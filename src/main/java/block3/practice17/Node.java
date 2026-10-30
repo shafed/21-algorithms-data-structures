@@ -2,13 +2,13 @@ package block3.practice17;
 
 import java.util.Scanner;
 
-public class Element {
+public class Node {
 
   static Scanner sc = new Scanner(System.in);
   String name;
   int age;
   int course;
-  Element next = null;
+  Node next = null;
 
   void readAttributes() {
     name = sc.nextLine();
