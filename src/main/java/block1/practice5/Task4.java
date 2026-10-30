@@ -1,4 +1,4 @@
-package block3.practice5;
+package block1.practice5;
 
 import java.awt.image.BufferedImage;
 import java.io.File;

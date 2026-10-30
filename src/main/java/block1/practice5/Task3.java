@@ -1,4 +1,4 @@
-package block3.practice5;
+package block1.practice5;
 
 import javax.swing.ImageIcon;
 import javax.swing.JFrame;
