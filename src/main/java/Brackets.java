@@ -1,6 +1,5 @@
 import java.util.ArrayDeque;
 
-// https://claude.ai/artifact/G5G8rbsKhtQFrHfjiumHrm
 public class Brackets {
   static char[] OPEN = {'(', '[', '{'};
   static char[] CLOSE = {')', ']', '}'};
