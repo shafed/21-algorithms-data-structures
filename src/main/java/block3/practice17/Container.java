@@ -109,5 +109,4 @@ public class Container {
   private boolean hasOneNode() {
     return head == tail;
   }
-
 }
