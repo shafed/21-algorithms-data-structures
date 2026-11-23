@@ -1,8 +1,8 @@
 import java.util.ArrayDeque;
 
 public class Brackets {
-  static char[] OPEN = {'(', '[', '{'};
-  static char[] CLOSE = {')', ']', '}'};
+  static char[] OPEN = { '(', '[', '{' };
+  static char[] CLOSE = { ')', ']', '}' };
 
   static boolean isOpen(char c) {
     for (char open : OPEN) {
@@ -47,8 +47,8 @@ public class Brackets {
   }
 
   public static void main(String[] args) {
-    String[] in = {"", "()", "([]{})", "([)]", "((", "))((", "a(b[c]d)e", "}", "{[()()]}"};
-    boolean[] exp = {true, true, true, false, false, false, true, false, true};
+    String[] in = { "", "()", "([]{})", "([)]", "((", "))((", "a(b[c]d)e", "}", "{[()()]}" };
+    boolean[] exp = { true, true, true, false, false, false, true, false, true };
     for (int i = 0; i < in.length; i++) {
       boolean got = isBalanced(in[i]);
       System.out.printf(
